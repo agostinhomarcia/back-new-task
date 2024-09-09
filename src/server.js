@@ -50,9 +50,9 @@ app.delete('/tasks/:id', (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Servidor rodando em http://localhost:${port}`);
+// });
 
 
-//module.exports = app;
+module.exports = app;
