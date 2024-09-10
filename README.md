@@ -4,10 +4,10 @@ Esta é uma API simples para gerenciar tarefas. Ela permite criar, listar, edita
 
 #### Funcionalidades
 
-🧩Criar uma nova tarefa
-🧩Listar todas as tarefas
-🧩Atualizar o status ou título de uma tarefa
-🧩Excluir uma tarefa
+🧩 Criar uma nova tarefa  
+🧩 Listar todas as tarefas  
+🧩 Atualizar o status ou título de uma tarefa  
+🧩 Excluir uma tarefa
 
 #### Deploy
 
