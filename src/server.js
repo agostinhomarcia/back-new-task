@@ -1,15 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3001;
-
 
 app.use(cors());
 app.use(express.json());
 
-
 let tasks = [];
 
+// Adicionando a rota GET para a raiz '/'
+app.get('/', (req, res) => {
+  res.send('Bem-vindo à API de Gerenciamento de Tarefas!');
+});
+
+// Rotas de tarefas
 app.post('/tasks', (req, res) => {
   const { title, dueDate, completed } = req.body;
   const newTask = {
@@ -21,7 +24,6 @@ app.post('/tasks', (req, res) => {
   tasks.push(newTask);
   res.json(newTask);
 });
-
 
 app.get('/tasks', (req, res) => {
   res.json(tasks);
@@ -42,17 +44,10 @@ app.put('/tasks/:id', (req, res) => {
   }
 });
 
-
 app.delete('/tasks/:id', (req, res) => {
   const { id } = req.params;
   tasks = tasks.filter((task) => task.id !== parseInt(id));
   res.json({ message: 'Task deleted' });
 });
-
-
-// app.listen(port, () => {
-//   console.log(`Servidor rodando em http://localhost:${port}`);
-// });
-
 
 module.exports = app;
