@@ -18,5 +18,7 @@ Esta API está hospedada na Vercel e pode ser acessada via:
 #### Tecnologias Utilizadas
 
 Node.js
+
 Express.js
+
 Vercel (Deploy)
