@@ -7,12 +7,12 @@ app.use(express.json());
 
 let tasks = [];
 
-// Adicionando a rota GET para a raiz '/'
+
 app.get('/', (req, res) => {
   res.send('Bem-vindo à API de Gerenciamento de Tarefas!');
 });
 
-// Rotas de tarefas
+
 app.post('/tasks', (req, res) => {
   const { title, dueDate, completed } = req.body;
   const newTask = {
